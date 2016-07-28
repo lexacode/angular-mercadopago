@@ -1,5 +1,5 @@
 # angular-lexacode-mercadopago
-A utility resource for checkout buttons using MercadoPago and AngularJS
+An AngularJS module for checkout with MercadoPago
 
 ### Install
 
