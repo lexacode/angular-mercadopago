@@ -1,0 +1,23 @@
+{
+  "name": "angular-lexacode-mercadopago",
+  "version": "0.0.1",
+  "description": "A utility resource for embed Vimeo videos",
+  "authors": [
+    "Axel Navarro <navarroaxel@gmail.com>"
+  ],
+  "main": "angular-lexacode-mercadopago.js",
+  "keywords": [
+    "angular",
+    "lexacode",
+    "mercadopago",
+    "payment"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "TODO.md"
+  ],
+  "dependencies": {
+    "angular": ">=1.3.0"
+  }
+}
