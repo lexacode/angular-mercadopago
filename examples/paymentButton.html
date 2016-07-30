@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myController">
+    <a name="MP-payButton" ng-click="openCheckout()" class="blue-ar-l-ov-aron">
+        Pay here!
+    </a>
+</div>
+<br/>
+<br/>
+To create test users:
+<a href="https://www.mercadopago.com.ar/developers/en/solutions/payments/basic-checkout/test/test-users/">
+    Click here!</a>
+<br/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="../angular-lexacode-mercadopago.js"></script>
+<script>
+    angular.module('myApp', ['lexacode.mercadopago']).controller('myController', function ($scope, mercadopago) {
+        // my payment button code
+        $scope.preferenceId = '222895757-277725d2-382c-4cb3-a420-5a803c27b6bb';
+
+        // loads the Mercadopago render script to styliz
+        mercadopago.loadRender();
+
+        // Open the modal to make the payment.
+        $scope.openCheckout = function () {
+            mercadopago.openCheckout({
+                url: 'https://www.mercadopago.com/mla/checkout/start?pref_id=' + $scope.preferenceId
+            }).then(function (data) {
+                // handles the success operation.
+                console.log(data);
+            }, function (err) {
+                // handles the failed operation.
+                console.log(err);
+            });
+        };
+    });
+</script>
+</body>
+</html>
