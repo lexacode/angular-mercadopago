@@ -1,4 +1,4 @@
-angular.module('lexacode.mercadopago', []).factory('mercadopago', function ($window, $document, $q) {
+angular.module('lexacode.mercadopago', []).factory('mercadopago', ['$window', '$document', '$q', function ($window, $document, $q) {
     'use strict';
     var mp;
 
@@ -50,4 +50,4 @@ angular.module('lexacode.mercadopago', []).factory('mercadopago', function ($win
             });
         }
     };
-});
+}]);
